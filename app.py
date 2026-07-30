@@ -13,6 +13,7 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
 
+
 # -----------------------------
 # PAGE CONFIGURATION
 # -----------------------------
@@ -28,9 +29,13 @@ st.set_page_config(
 # DOWNLOAD NLTK RESOURCES
 # -----------------------------
 
+
+
+
 @st.cache_resource
 def download_nltk():
     nltk.download("punkt", quiet=True)
+    nltk.download("punkt_tab", quiet=True)
     nltk.download("stopwords", quiet=True)
     nltk.download("wordnet", quiet=True)
 

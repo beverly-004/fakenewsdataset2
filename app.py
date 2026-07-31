@@ -628,11 +628,14 @@ with col2:
 # ============================================================================
 
 if clear:
-    st.session_state.article = ""
+
+    st.session_state.pop("article", None)
+
     st.session_state.prediction_made = False
     st.session_state.result_data = None
-    st.rerun()
 
+    st.rerun()
+    
 # ============================================================================
 # PREDICTION ENGINE
 # ============================================================================
